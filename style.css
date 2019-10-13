@@ -8,16 +8,19 @@ body {
     
 }
 
-.log__in {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-content: center;
+i:first-of-type { 
+    font-size: 25px;
+    margin-top: 20px;
+    
 }
 
-i:first-of-type{
-    font-size: 30px;
-    margin-top: 50px;
+.log__in--text {
+    margin: 0 auto;
+    max-width: 380px;
+}
+
+.log__in--text h1 {
+    margin-bottom: 60px;
 }
 
 .log__in--button1 {
@@ -25,10 +28,15 @@ i:first-of-type{
     margin: 0 auto;
     margin-bottom: 20px;
     border-radius: 25px;
-    width: 60%;
-    height: 50px;
+    width: 100%;
+    height: 35px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
+    
+}
+
+.log__in--button a {
+    text-decoration: none;
 }
 
 button:first-of-type {
@@ -36,40 +44,43 @@ button:first-of-type {
     color: white;
 }
 
-button:nth-of-type(2) {
+body > div.log__in--buttonMobile > a:nth-child(2) > button, 
+body > div.log__in > div.log__in--text > div > div > a:nth-child(2) > button {
     color: #0E7F0D;
+    background: white;
+    border-color: #0E7F0D;
 }
 
 .log__in--buttonMobile {
     text-align: center;
-    margin: 20px;
+    margin: 20px auto;
+    max-width: 380px;
 }
 
 .log__in--buttonMobile2 {
     text-align: center;
-    margin: 0 auto;
     border-radius: 25px;
-    width: 40%;
-    height: 40px;
+    width: 46%;
+    height: 38px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 footer {
     text-align: center;  
     width: 100%;
-    font-weight: bold;
     color:grey;
-    font-size: 14px;
+    font-size: 12px;
+    line-height: 24px;
     text-decoration: none;
     padding: 20px; 
 }
 
 footer a { 
-    font-weight: bold;
+    font-weight: 100;
     color:grey;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 12px;
+    line-height: 24px;
     text-decoration: none;
     padding: 20px; 
 }
@@ -84,15 +95,143 @@ footer a:hover {
     background-size:cover;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    align-items: center;
     color: white;
 }
 
-.text i {
-    margin-right: 20px;
+.text__width {
+        width: 380px;
+        margin: 0 auto;
 }
 
-   @media (min-width: 500px) {
+.text i {
+    margin-right: 15px;
+}
+
+.text h3 {
+    margin-bottom: auto;
+    max-width: 380px;
+}
+
+.text h3:last-of-type {
+    margin-bottom: 40px;
+}
+
+/*Forms*/
+
+  .username, .password, .phone {
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 2px solid #0E7F0D;
+    padding-left: 0;
+    font-weight: normal;
+    background: transparent;  
+  }
+  
+  .login {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 20px;
+    background: #0E7F0D;
+    color: white;
+    opacity: 0.5;
+  }
+
+  .login__heading {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .login__form {
+    margin: 20px auto;
+    text-align: center;
+    max-width:70%;
+    position: relative;
+  }
+
+  .overlaping__label {
+    position: absolute;
+    left: 2px;
+
+  }
+
+  .login__form input {
+    line-height: 50px;
+    margin-bottom: 20px;
+    background: #e6fff2;
+    padding: 5px;
+  }
+
+  .login__form input:last-of-type {
+    background: #0E7F0D;
+  }
+  
+  .login-links {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 80%;
+  }
+
+  .login-links a {
+    text-decoration: none;
+  }
+
+  .signin__heading {
+    margin: 20px auto;
+    max-width:70%;
+    position: relative;
+  }
+
+  .icon {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+
+  .signin__form {
+    margin: 20px auto;
+    text-align: center;
+    width:100%;
+    position: relative;
+  }
+
+  .signin__form input {
+    line-height: 50px;
+    margin-bottom: 20px;
+    background: #e6fff2;
+    padding: 5px;
+  }
+
+  .signin-links {
+    margin: 0 auto;
+    text-align: left;
+    max-width: 70%;
+  }
+
+  .signin-links a {
+    text-decoration: none;
+  }
+
+   .btn-next {
+    float: right;
+    display: block;
+    margin: 20px;
+    border-radius: 25px;
+    width: 10%;
+    height: 25px;
+    font-weight: bold;
+    font-size: 16px;
+    background: #0E7F0D;
+    color: white;
+   }
+
+   @media (min-width: 800px) {
     .log__in--buttonMobile {
         display: none;
     }
@@ -101,16 +240,35 @@ footer a:hover {
         display: flex;
         flex-direction: row-reverse;
     }
-    
+    .log__in--button1 {
+        width: 100%;
+        height: 45px;
+    }
+
     .text {
-        height: 100vh;
+        height: 90vh;
         width:100%; 
         justify-content: center;
     }
 
     .log__in--text {
         align-self: center;
+        width: 100%;
+        max-width: 100%;
 
     }
 
+    .text h3 {
+        margin: 0 auto 20px auto;
+        width: 380px;
+    }
+
+    .log__in--textLarge {
+        width: 380px;
+        margin: 0 auto;
+    }
+
+    body > div.log__in {
+        display: initial;
+    }
 }
